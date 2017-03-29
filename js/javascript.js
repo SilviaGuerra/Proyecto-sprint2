@@ -7,20 +7,23 @@ function agregarTarea(){
   document.getElementById("nuevoElemento").value = "";
 }
 
-// function agregarTitulo(){
-//   var titulo = document.getElementById("agregartitulo");
-//
-// }
+function agregarTitulo(){
+  var pedirTitulo = prompt("¿Cúal es el título?");
+  var agregarTitulo = document.getElementById("titulo");
+  agregarTitulo.innerHTML = pedirTitulo;
+}
+
+function editar(){
+  var nuevoTitulo = prompt("¿Cúal es el nuevo título?");
+  var agregarTitulo = document.getElementById("nuevoTitulo");
+  var tituloAnterior = document.getElementById("titulo");
+  tituloAnterior.innerHTML = nuevoTitulo;
+}
 
 function agregarLista(){
   var nuevaTab = document.getElementById("nuevaTab");
   var clon = nuevaTab.cloneNode(true);
   document.getElementById("nuevaSeccion").appendChild(clon);
+
   agregarTarea();
 }
-
-
-// var node = document.createElement("table");
-// var nuevaTab = document.getElementById("nuevaTab");
-// var tabla = nuevaTab.appendChild(node);
-// nuevaTab.innerHTML = nuevaTarea;
