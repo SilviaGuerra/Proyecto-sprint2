@@ -14,7 +14,14 @@
       <table border="1" height="105">
         <tr>
           <td>
-            <p id="lista">Agregar pendiente:</p>
+            <div id="titulo"></div>
+            <input id="agregartitulo" type="text" placeholder="Editar título" id="titulo" style="font-weight:bold;">
+            <button onclick="agregarTitulo()">Agregar</button>
+            <br>
+            <br>
+
+            <div id="lista"></div>
+            <p style="font-size:14px">Agregar pendiente:</p>
             <input id="nuevoElemento" type="text" placeholder="Añadir">
             <button onclick="agregarTarea()">Agregar</button>
           </td>
