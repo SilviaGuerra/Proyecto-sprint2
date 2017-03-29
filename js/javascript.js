@@ -13,17 +13,20 @@ function agregarTitulo(){
   agregarTitulo.innerHTML = pedirTitulo;
 }
 
-function editar(){
+function editarTitulo(){
   var nuevoTitulo = prompt("¿Cúal es el nuevo título?");
   var agregarTitulo = document.getElementById("nuevoTitulo");
   var tituloAnterior = document.getElementById("titulo");
   tituloAnterior.innerHTML = nuevoTitulo;
 }
 
+function borrar(){
+  document.getElementById("nuevoElemento").value = "";
+}
+
 function agregarLista(){
   var nuevaTab = document.getElementById("nuevaTab");
   var clon = nuevaTab.cloneNode(true);
   document.getElementById("nuevaSeccion").appendChild(clon);
-
   agregarTarea();
 }

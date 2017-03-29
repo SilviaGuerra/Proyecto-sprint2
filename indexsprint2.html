@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
   <head>
     <meta charset="utf-8">
     <title>Trollo</title>
+    <link rel="icon" href="imagenes/favicon.ico" type="image/x-icon">
   </head>
-  <body style="text-align:center">
 
-    <h1><strong>Trollo</strong></h1>
-    <div style="background:#CC99FF;">
-      <button onclick="agregarLista()">+</button>
+  <body style="background:#6666CC">
+
+    <h1 style="text-align:center"><strong>Trollo</strong></h1>
+    <div style="background:#CC99FF; align:left">
+      <button onclick="agregarLista()" style="text-align:right;">+</button>
     </div>
     <br>
 <!-- cree una section para agregar una tabla y ahi meter los pendientes -->
@@ -17,10 +19,12 @@
         <tr>
           <td>
             <div id="titulo" style="font-weight:bold;">Título</div>
-            <button id="nuevotitulo" onclick="editar()">Editar</button>
+            <button id="nuevotitulo" onclick="editarTitulo()">Editar</button>
             <button id="titulo" onclick="agregarTitulo()">Agregar</button>
             <br>
             <br>
+
+            <button onclick="borrar()">x</button>
 
             <div id="lista"></div>
             <p style="font-size:14px">Agregar pendiente:</p>
