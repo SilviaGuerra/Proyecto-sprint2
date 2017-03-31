@@ -2,31 +2,37 @@ function agregarTarea(){
   var nuevoElemento = document.getElementById("nuevoElemento").value;
   var node = document.createElement("li");
   var llamar = document.getElementById("lista");
+  var textNode = document.createTextNode("nuevoElemento");
   var lista = llamar.appendChild(node);
-  lista.innerHTML = nuevoElemento;
+  lista.innerText = nuevoElemento;
   document.getElementById("nuevoElemento").value = "";
-}
-
-function agregarTitulo(){
-  var pedirTitulo = prompt("¿Cúal es el título?");
-  var agregarTitulo = document.getElementById("titulo");
-  agregarTitulo.innerHTML = pedirTitulo;
+  // llamar.id = Date.now();
+  // lista.value = llamar.id
 }
 
 function editarTitulo(){
-  var nuevoTitulo = prompt("¿Cúal es el nuevo título?");
-  var agregarTitulo = document.getElementById("nuevoTitulo");
   var tituloAnterior = document.getElementById("titulo");
+  var nuevoTitulo = prompt("Ingrese titulo nuevo");
   tituloAnterior.innerHTML = nuevoTitulo;
 }
 
-function borrar(){
-  document.getElementById("nuevoElemento").value = "";
-}
-
 function agregarLista(){
-  var nuevaTab = document.getElementById("nuevaTab");
-  var clon = nuevaTab.cloneNode(true);
-  document.getElementById("nuevaSeccion").appendChild(clon);
-  agregarTarea();
+  var nuevaLista = document.getElementById("lista");
+  var tabla = document.getElementById("nuevaTab");
+  var clon = tabla.cloneNode(true);
+  var botonBorrar = document.createElement("button");
+  var nuevaTab = document.getElementById("nuevaSeccion").appendChild(clon);
+
+  clon.id = Date.now();
+  tabla.value = clon.id
+  nuevaLista.id = clon.id
+  botonBorrar.value = clon.id
+  botonBorrar.innerText = "Borrar"
+
+  // botonBorrar.onclick = function(){
+  //   var idElementoABorrar = document.getElementById(this.value);
+  //   nuevaLista.removeChild(this)
+  //   nuevaLista.removeChild(idElementoABorrar)
+  // }
+
 }

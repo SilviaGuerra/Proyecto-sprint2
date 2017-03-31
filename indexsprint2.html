@@ -6,30 +6,31 @@
     <link rel="icon" href="imagenes/favicon.ico" type="image/x-icon">
   </head>
 
-  <body style="background:#6666CC">
+  <body>
 
-    <h1 style="text-align:center"><strong>Trollo</strong></h1>
-    <div style="background:#CC99FF; align:left">
+    <h1 style="text-align:center; background:#CC33FF; margin:0px"><strong>Trollo</strong></h1>
+    <div style="background:#CC66FF; align:left">
       <button onclick="agregarLista()" style="text-align:right;">+</button>
     </div>
     <br>
-<!-- cree una section para agregar una tabla y ahi meter los pendientes -->
+
+<!--Se crea una section para agregar una tabla y ahi meter los pendientes -->
     <section id="nuevaTab" style="text-align:left">
-      <table border="1" height="105">
+      <table border="1" height="105" margin-left:"20">
         <tr>
           <td>
-            <div id="titulo" style="font-weight:bold;">Título</div>
-            <button id="nuevotitulo" onclick="editarTitulo()">Editar</button>
-            <button id="titulo" onclick="agregarTitulo()">Agregar</button>
+            <label id="titulo" style="font-weight:bold;" onclick="editarTitulo()" type="text">Titulo</label><br>
+            <!-- <input  placeholder="Añadir título" > -->
             <br>
+            <!-- <button id="nuevotitulo" onclick="guardarTitulo()">Guardar</button>
             <br>
-
-            <button onclick="borrar()">x</button>
+            <br> -->
 
             <div id="lista"></div>
-            <p style="font-size:14px">Agregar pendiente:</p>
-            <input id="nuevoElemento" type="text" placeholder="Añadir">
-            <button onclick="agregarTarea()">Agregar</button>
+              <p style="font-size:14px">Agregar pendiente:</p>
+              <input id="nuevoElemento" type="text" placeholder="Añadir">
+              <button onclick="agregarTarea()">Agregar</button>
+
           </td>
         </tr>
       </table>
