@@ -17,8 +17,8 @@ function editarTitulo(){
 }
 
 function agregarLista(){
-  var nuevaLista = document.getElementById("lista");
   var tabla = document.getElementById("nuevaTab");
+  var nuevaLista = document.getElementById("lista");
   var clon = tabla.cloneNode(true);
   var botonBorrar = document.createElement("button");
   var nuevaTab = document.getElementById("nuevaSeccion").appendChild(clon);
